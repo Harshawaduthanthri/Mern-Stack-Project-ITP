@@ -1,0 +1,37 @@
+.employee-manager-menu-container {
+    width: 100%;
+    height: 750px;
+    max-width: 250px; /* Adjust the width as needed */
+    background-color: #929ba3; /* Light gray background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .list-group {
+    margin-top: 20px; /* Margin at the top */
+  }
+  
+  h4 {
+    margin-bottom: 20px; /* Margin below the heading */
+    color: #333; /* Dark gray text color */
+  }
+  
+  .menu-link {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .menu-link:hover,
+  .menu-link.active-menu-link {
+    background-color: #d7e1ea; /* Light gray background color on hover and when active */
+    color: #007bff; /* Blue text color on hover and when active */
+  }
+  
+  .menu-link:last-child {
+    margin-bottom: 20px; /* Margin at the bottom for the last menu item */
+  }
+  

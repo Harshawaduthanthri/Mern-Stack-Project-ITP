@@ -1,0 +1,100 @@
+import express from "express";
+import {
+  createProductController,
+  deleteProductController,
+  getProductController,
+  getSingleProductController,
+  productCountController,
+  productFiltersController,
+  productListController,
+  productPhotoController,
+  searchProductController,
+  updateProductController,
+  realtedProductController,
+  productCategoryController,
+  braintreeTokenController,
+  brainTreePaymentController,
+  mostBoughtItemsController,
+  createRatingController,
+  getAllRatings,
+  getAllOfUserRatings,
+  getUserReviews,
+  deleteRatingController,
+  generateReport,
+
+
+   
+} from "../controllers/productController.js";
+import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
+import formidable from "express-formidable";
+
+const router = express.Router();
+
+//routes
+router.post(
+  "/create-product",
+  requireSignIn,
+  isAdmin,
+  formidable(),
+  createProductController
+);
+//routes
+router.put(
+  "/update-product/:pid",
+  requireSignIn,
+  isAdmin,
+  formidable(),
+  updateProductController
+);
+
+//get products
+router.get("/get-product", getProductController);
+
+//single product
+router.get("/get-product/:slug", getSingleProductController);
+
+//get photo
+router.get("/product-photo/:pid", productPhotoController);
+
+//delete product
+router.delete("/delete-product/:pid", deleteProductController);
+
+//filter product
+router.post("/product-filters", productFiltersController);
+
+//product count
+router.get("/product-count", productCountController);
+
+//product per page
+router.get("/product-list/:page", productListController);
+
+//search product
+router.get("/search/:keyword", searchProductController);
+
+//similar product
+router.get("/related-product/:pid/:cid", realtedProductController);
+
+//category wise product
+router.get("/product-category/:slug", productCategoryController);
+
+//payment routes
+router.get("/braintree/token", braintreeTokenController);
+
+//payment routes
+router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
+
+router.get("/mostboughtitems",mostBoughtItemsController);
+
+router.post("/giveratings/:pid",requireSignIn,createRatingController);
+
+router.get("/getAllratings/product/:pid", getAllRatings); 
+
+router.get("/getAllratings", getAllOfUserRatings); 
+
+
+router.get("/getUserRatings",requireSignIn, getUserReviews); 
+
+
+router.delete("/deleteratings/:rid", deleteRatingController ); 
+router.get("/report", generateReport ); 
+export default router;

@@ -1,0 +1,95 @@
+/* AdminOrders.css */
+
+/* Main container */
+.containerFluid {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Rows */
+.row {
+  margin-bottom: 15px;
+}
+
+/* Tables */
+.table {
+  background-color: #fff;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.table th, .table td {
+  padding: 10px 15px;
+  border: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #f1f1f1; /* Light grey background for header */
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa; /* Hover effect */
+}
+
+/* Buttons */
+.btnDanger {
+  background-color: #dc3545; /* Bootstrap default */
+  border-color: #dc3545;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btnDanger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Cards */
+.card {
+  border: 1px solid #dee2e6;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.card img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cardText {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* Select dropdown */
+.ant-select {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.ant-select .ant-select-selection-item {
+  font-size: 14px;
+}
+
+.ant-select-dropdown {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}

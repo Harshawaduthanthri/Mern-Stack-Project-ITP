@@ -1,0 +1,16 @@
+/* AdminDashboard.css */
+
+/* Hover effect on cards */
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Blue-themed lights */
+  .card {
+    background-color: #e8f5fe; /* Light blue background color */
+  }
+  
+  .card-title {
+    color: #007bff; /* Blue text color for card titles */
+  }
+  
